@@ -213,7 +213,6 @@ launch_webui() {
     npm run pm2:start || { echo "npm run pm2:start failed"; exit 1; }
 }
 
-# TODO: 关键逻辑就在这了，前面都是检查环境
 if [[ ! -z "${ACCELERATE}" ]] && [ ${ACCELERATE}="True" ] && [ -x "$(command -v accelerate)" ]
 then
     printf "\n%s\n" "${delimiter}"

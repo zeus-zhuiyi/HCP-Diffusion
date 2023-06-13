@@ -68,11 +68,10 @@ echo Checking for accelerate
 set ACCELERATE="%VENV_DIR%\Scripts\accelerate.exe"
 if EXIST %ACCELERATE% goto :accelerate_launch
 
-:: TODO: 不需要这个
 :launch
 echo launch
 call %PIP% install -e . %*
-cd ..\HCP-Diffusion-WebUI
+cd ..\web
 call %NPM% install
 call %NPM% run build
 call %NPM% run pm2:start
