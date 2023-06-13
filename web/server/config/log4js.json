@@ -1,0 +1,25 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console",
+      "layout": {
+        "type": "colored"
+      }
+    },
+    "file": {
+      "type": "file",
+      "filename": "server/logs/app.log",
+      "pattern": "-yyyy-MM-dd",
+      "layout": {
+        "type": "pattern",
+        "pattern": "%d %p %c - %m%n"
+      }
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": ["console", "file"],
+      "level": "debug"
+    }
+  }
+}
